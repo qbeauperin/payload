@@ -180,6 +180,22 @@ export default buildConfig({
         },
       ],
     },
+    {
+      slug: 'required-relationship-collection',
+      fields: [
+        {
+          name: 'text',
+          type: 'text',
+          localized: true,
+        },
+        {
+          name: 'nonLocalizedRequiredRelationship',
+          type: 'relationship',
+          relationTo: 'users',
+          required: true,
+        },
+      ],
+    },
   ],
   globals: [
     {
@@ -195,6 +211,22 @@ export default buildConfig({
               localized: true,
             },
           ],
+        },
+      ],
+    },
+    {
+      slug: 'required-relationship-global',
+      fields: [
+        {
+          name: 'text',
+          type: 'text',
+          localized: true,
+        },
+        {
+          name: 'nonLocalizedRequiredRelationship',
+          type: 'relationship',
+          relationTo: 'users',
+          required: true,
         },
       ],
     },
